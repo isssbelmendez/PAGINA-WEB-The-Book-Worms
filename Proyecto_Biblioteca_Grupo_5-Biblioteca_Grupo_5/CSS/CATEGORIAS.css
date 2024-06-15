@@ -1,0 +1,191 @@
+
+/*////////////////////////////////////STYLE NAVBAR////////////////////////////////////*/
+body {
+    padding-top: 60px; 
+    justify-content: center;
+}
+
+.navbar {
+    text-align: center;
+    background-color: #FF83A0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar-list li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar-list li a:hover {
+    background-color: #555;
+}
+
+
+/*////////////////////////////////////////////////////STYLE DE CARDS///////////////////////////////////////////*/
+.quote {
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.categoriaslibros {
+    padding: 5px;
+    border-radius: 20px 20px 20px 20px;
+    margin-left: 20%;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba (0, 0, 0, 0, 2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.categoriaslibros:hover {
+    box-shadow: 5px 5px 20px rgba (0, 0, 0, 0, 4);
+    transform: translateY(-3%);
+}
+
+#infantiles {
+    background: linear-gradient(#ff83a0, #cd3d5e);
+
+}
+
+#infantiles {
+    background: linear-gradient(#ff83a0, #cd3d5e);
+    text-align: center;
+    margin-right: 10%;
+    display: flex
+}
+
+#educativos {
+    background: linear-gradient(#9a97ce, #5d57e1);
+    justify-content: center;
+    margin-right: 10%;
+    display: flex
+}
+
+#dramas {
+    background: linear-gradient(#71b3d4, #0096ff);
+    justify-content: center;
+    margin-right: 10%
+}
+
+#terror {
+    background: linear-gradient(#9e8da5, #b231e0);
+    justify-content: center;
+    margin-right: 10%;
+    display: flex
+}
+
+#arte {
+    background: linear-gradient(#3f8877, #79ead0);
+    justify-content: center;
+    margin-right: 10%;
+    display: flex
+}
+
+#comedia {
+    background: linear-gradient(#fada9e, #ffce71);
+    justify-content: center;
+    margin-right: 10%;
+    display: flex
+}
+
+.titulos {
+    color: #fff;
+    font-size: 300%;
+    text-align: center;
+
+}
+
+p {
+    color: #404040;
+    font-size: 140%;
+    justify-content: space-around center;
+    text-align: center;
+}
+
+
+a {
+    color: #fff;
+    margin-right: 3%;
+    text-decoration: none;
+    font-size: larger;
+}
+
+/*///////////////////////////////////////////////ESTILO DE LOGO////////////////////////////////////////////*/
+.logo {
+    text-align: left;
+}
+
+.logo img {
+    max-width: 25%;
+    height: auto;
+    object-fit: contain;
+    text-align: left;
+}
+
+/*//////////////////////////////////////////////////ESTILO DEL FOOTER///////////////////////////////////////*/
+#menu-social {
+    margin-top: 20px;
+    /* Ajusta este valor según lo que necesites */
+    padding: 20px 0;
+    background-color: #f55c7a;
+    text-align: center;
+    /* Centra los elementos del footer */
+    clear: both;
+    /* Asegura que el footer no se superponga con otros elementos */
+}
+
+#menu-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-social ul li {
+    display: inline-block;
+}
+
+#menu-social li a {
+    color: #000000;
+    margin: 0 10px;
+    text-decoration: none;
+    /* Quita el subrayado de los enlaces */
+}
+
+#menu-social li a:hover {
+    color: #000000;
+}
+
+#menu-social li a::before {
+    content: "";
+    display: inline-block;
+    width: 1.25em;
+    /* Ancho del icono */
+    height: 1.25em;
+    /* Alto del icono */
+    margin-right: 0.5em;
+    /* Espaciado a la derecha del icono */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}

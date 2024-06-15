@@ -1,0 +1,390 @@
+/*////////////////////////////////////STYLE NAVBAR////////////////////////////////////*/
+body {
+    padding-top: 60px;
+    justify-content: center;
+}
+
+.navbar {
+    text-align: center;
+    background-color: #FF83A0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.avbar-list {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0; 
+    padding: 0; 
+}
+
+.navbar-list li {
+    display: inline-block; 
+    margin-right: 20px; 
+}
+
+.navbar-list li a {
+    color: #fff; 
+    text-decoration: none; 
+    padding: 16px 25px; 
+    display: block; 
+    font-weight: bold; 
+}
+
+.navbar-list li a:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+    font-family: Arial, sans-serif; 
+    font-weight: bold; 
+}
+
+
+/*///////////////////////////////////////////////ESTILO DE LOGO////////////////////////////////////////////*/
+.logo {
+    text-align: left;
+}
+
+.logo img {
+    max-width: 25%;
+    height: auto;
+    object-fit: contain;
+    text-align: left;
+}
+
+
+
+/*///////////////////////////////////////////////////STYLE DE SLIDER//////////////////////////////////////////*/
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 94%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    animation-name: slideAnimation;
+    animation-duration: 5s; /* Duración de cada imagen antes de cambiar */
+    animation-iteration-count: infinite; /* Repetir la animación infinitamente */
+}
+
+
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 640px;
+    /* Ajusta esta altura según sea necesario */
+    object-fit: cover;
+    /* Para que la imagen se ajuste sin distorsionarse */
+    border-radius: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/*//////////////////////////////////////////////////ESTILO DE NOVEDADES///////////////////////////////////////*/
+/* Título de la sección */
+.titulo {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos CSS para el contenedor de las tarjetas */
+.card-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente las tarjetas */
+    gap: 20px;
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan en varias líneas */
+    margin-top: 20px; /* Espacio opcional en la parte superior */
+}
+
+/* Estilos CSS para las tarjetas */
+.card {
+    flex: 1 1 200px; /* Flexibilidad para que las tarjetas puedan crecer pero mantengan un máximo de 200px */
+    max-width: 400px; /* Ancho máximo de cada tarjeta */
+    height: 200px;
+    border-radius: 10px;
+    text-align: center;
+    background: radial-gradient(circle, #ffb6c1 0%, #f86b8c 100%);
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave opcional */
+}
+
+
+
+.card img {
+    width: 150px; /* Ajustar el tamaño de la imagen */
+    height: 150px; /* Ajustar el tamaño de la imagen */
+    border-radius: 50%; /* Hacer la imagen redonda */
+    margin: 0 auto; /* Centrar la imagen */
+    display: block;
+    transition: all 400ms ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir una sombra */
+}
+
+.card img:hover {
+    transform: scale(1.1); /* Agrandar la imagen al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Incrementar la sombra */
+}
+/* Estilos para el contenedor de la tarjeta */
+.card-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap:30px;
+}
+
+/* Estilos para la tarjeta */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 600px;
+    height: 400px;
+}
+
+
+.card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.9em;
+    color: #666;
+    text-align: justify;
+    /* Mejor alineación del texto */
+    margin: 10px 0;
+}
+
+
+
+
+/*//////////////////////////////////////////////////ESTILO DE LA BIENVENIDA///////////////////////////////////////*/
+
+.image-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 25px;
+}
+
+.image-container img {
+    max-width: 50%; /* Tamaño máximo del 50% del ancho de la tarjeta */
+    height: auto; /* Ajusta la altura automáticamente */
+    border-radius: 30px;
+    transition: all 400ms ease;
+    display: inline-block;
+    position: relative;
+    animation: moveImage 5s infinite alternate; /* Animación de movimiento */
+    
+}
+
+/* Definición de la animación para la imagen */
+@keyframes moveImage {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20px); } /* Cambia el valor según la distancia deseada */
+}
+
+/* Estilos para el contenido de texto */
+.contenedor {
+    display: flex;
+    border-radius: 8px;
+    max-width: 2000px;
+    overflow: hidden;
+    transform: translateY(-3%);
+}
+
+.seccion-imagen {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.seccion-imagen img {
+    max-width: 85%;
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+}
+
+.seccion-imagen img:hover {
+    transform: scale(1.05); /* Agrandar la imagen al pasar el ratón */
+}
+
+.seccion-texto {
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+    animation: changeColor 5s infinite alternate; /* Animación de cambio de color */
+}
+
+.seccion-texto h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.seccion-texto p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Definición de la animación para el texto */
+@keyframes changeColor {
+    0% { color: #333; } /* Color original */
+    50% { color: #f86b8c; } /* Color intermedio */
+    100% { color: #333; } /* Vuelve al color original */
+}
+
+
+/*//////////////////////////////////////////////////ESTILO DE LA COMUNIDAD///////////////////////////////////////*/
+.comunidad {
+    text-align: center;
+    padding: 40px;
+}
+
+.h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.lectores {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.lector {
+    text-align: center;
+}
+
+.numero {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.texto {
+    color: #666;
+    margin: 0;
+}
+
+/* Colores específicos para cada lector */
+#lector1 {
+    color: #8a4af3; /* Morado */
+}
+
+#lector2 {
+    color: #23d18b; /* Verde */
+}
+
+#lector3 {
+    color: #f1c40f; /* Amarillo */
+}
+
+#lector4 {
+    color: #f86b8c; /* Rojo */
+}
+
+
+/*//////////////////////////////////////////////////ESTILO DEL FOOTER///////////////////////////////////////*/
+#menu-social {
+    margin-top: 20px;
+    /* Ajusta este valor según lo que necesites */
+    padding: 20px 0;
+    background-color: #f55c7a;
+    text-align: center;
+    /* Centra los elementos del footer */
+    clear: both;
+    /* Asegura que el footer no se superponga con otros elementos */
+}
+
+#menu-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-social ul li {
+    display: inline-block;
+}
+
+#menu-social li a {
+    color: #000000;
+    margin: 0 10px;
+    text-decoration: none;
+    /* Quita el subrayado de los enlaces */
+}
+
+#menu-social li a:hover {
+    color: #000000;
+}
+
+#menu-social li a::before {
+    content: "";
+    display: inline-block;
+    width: 1.25em;
+    /* Ancho del icono */
+    height: 1.35em;
+    /* Alto del icono */
+    margin-right: 0.5em;
+    /* Espaciado a la derecha del icono */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.card:hover .circle-image {
+    transform: scale(1.1);
+}
+
+.card:hover h2,
+.card:hover .card-text {
+    transform: translateY(-10px);
+    opacity: 0.8;
+}

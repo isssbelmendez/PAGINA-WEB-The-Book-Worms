@@ -1,0 +1,142 @@
+/*////////////////////////////////////STYLE NAVBAR////////////////////////////////////*/
+body {
+    padding-top: 60px; 
+    justify-content: center;
+}
+
+.navbar {
+    text-align: center;
+    background-color: #FF83A0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar-list li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar-list li a:hover {
+    background-color: #555;
+}
+
+
+/*///////////////////////////////////////////////ESTILO DE LOGO////////////////////////////////////////////*/
+.logo {
+    text-align: left;
+}
+
+.logo img {
+    max-width: 25%;
+    height: auto;
+    object-fit: contain;
+    text-align: left;
+}
+
+/* /////////////////////////////////////////////////////Estilo de la sección de tarjetas///////////////////////////// */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    width: 30%;
+    border-radius: 6px;
+    overflow: hidden;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+}
+
+.card h1, .card h3, .card p {
+    color: #fff;
+    text-align: center;
+    margin: 10px;
+}
+
+.card a {
+    color: #fff;
+    text-decoration: none;
+    font-size: larger;
+}
+
+/*//////////////////////////////////////////////////ESTILO DEL FOOTER///////////////////////////////////////*/
+#menu-social {
+    margin-top: 20px;
+    /* Ajusta este valor según lo que necesites */
+    padding: 20px 0;
+    background-color: #f55c7a;
+    text-align: center;
+    /* Centra los elementos del footer */
+    clear: both;
+    /* Asegura que el footer no se superponga con otros elementos */
+}
+
+
+#menu-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-social ul li {
+    display: inline-block;
+}
+
+#menu-social li a {
+    color: #000000;
+    margin: 0 10px;
+    text-decoration: none;
+    /* Quita el subrayado de los enlaces */
+}
+
+#menu-social li a:hover {
+    color: #000000;
+}
+
+#menu-social li a::before {
+    content: "";
+    display: inline-block;
+    width: 1.25em;
+    /* Ancho del icono */
+    height: 1.25em;
+    /* Alto del icono */
+    margin-right: 0.5em;
+    /* Espaciado a la derecha del icono */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
